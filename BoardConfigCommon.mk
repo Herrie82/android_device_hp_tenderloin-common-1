@@ -4,6 +4,9 @@
 
 PLATFORM_PATH := device/hp/tenderloin-common
 
+# Halium requires BOARD_BUILD_SYSTEM_ROOT_IMAGE for non-Treble devices
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include 
 
 # Platform
