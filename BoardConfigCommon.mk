@@ -5,7 +5,11 @@
 PLATFORM_PATH := device/hp/tenderloin-common
 
 # Halium requires BOARD_BUILD_SYSTEM_ROOT_IMAGE for non-Treble devices
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+# Seems to fail for us with lvm.conf SELinux issue, so disabling it
+# e2fsdroid -p /media/herrie/HaliumDisk/9.0/out/target/product/tenderloin/system -S /media/herrie/HaliumDisk/9.0/out/target/product/tenderloin/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin -f /tmp/tmpLWj2RJ -a / /media/herrie/HaliumDisk/9.0/out/target/product/tenderloin/obj/PACKAGING/systemimage_intermediates/system.img
+# set_selinux_xattr: Unknown code ____ 255 searching for label "/lvm.conf"
+
+# BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include 
 
