@@ -74,8 +74,8 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 # Camera
-PRODUCT_PACKAGES += \
-    camera.msm8660
+#PRODUCT_PACKAGES += \
+#    camera.msm8660
 
 # Display
 PRODUCT_PACKAGES += \
